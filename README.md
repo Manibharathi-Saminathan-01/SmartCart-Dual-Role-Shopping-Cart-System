@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Project Description:
+The "SmartCart: Dual-Role Shopping Cart System" is a mini-project designed to simulate an online shopping environment with two distinct roles: product producers and product buyers. The system allows product producers to add new products by specifying details such as product name, description, quantity, price, and availability. Buyers can browse the available products, view their details, and make purchases by updating the quantity of selected items.  
+
+The project employs two tables to manage data efficiently:  
+1. Product Producer Table: Maintains a record of all available products added by producers, including their descriptions, quantities, prices, and availability status.  
+2. Product Buyer Table: Tracks the products selected by buyers, enabling the creation of a personalized shopping cart experience.  
+
+This project serves as a foundational example of e-commerce functionality, demonstrating core features such as inventory management, user interaction, and transaction handling.
+
