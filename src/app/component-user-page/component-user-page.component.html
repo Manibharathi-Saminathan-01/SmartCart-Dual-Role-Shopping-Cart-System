@@ -1,0 +1,33 @@
+<div class="table-for-border">
+  <table>
+    <tr>
+      <td>Product Id</td>
+      <td>Product Name</td>
+      <td>Product Description</td>
+      <td>Product Price</td>
+      <td>Action</td>
+    </tr>
+    <tr
+      *ngFor="let item of inputDatasForUser"
+      [appRowColorDirective]="givenName"
+      [productListOfUser]="item"
+      [rowIdValue]="rowIdValue"
+      [colorOfUserTableRow]="'purple'"
+    >
+      <td>{{ item.productid }}</td>
+      <td>{{ item.productname }}</td>
+      <td [appTooltipDirective]="item.productdescription">
+        {{ item.productdescription | trim : 5 }}
+      </td>
+      <td>{{ item.productPrice | priceTag : "$" }}</td>
+      <td>
+        <button
+          (click)="buyProducts(item.productid)"
+          [disabled]="disableDeleteButton(item.productquandity)"
+        >
+          Buy
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

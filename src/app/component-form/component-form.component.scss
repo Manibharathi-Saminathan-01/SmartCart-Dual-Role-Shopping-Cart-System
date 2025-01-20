@@ -1,0 +1,102 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  background-color: #25704e;
+}
+.form-content {
+  display: flex;
+  background-color: #67917e;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem 3rem 2rem;
+  border: 2px solid;
+  row-gap: 20px;
+}
+.first-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 51px;
+}
+.second-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 164px;
+}
+.third-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 258px;
+}
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.child-table {
+  display: flex;
+  flex-direction: row;
+  column-gap: 27px;
+  background-color: #66ad9a;
+}
+.admin-table {
+  width: 50%;
+}
+.user-table {
+  width: 50%;
+}
+.admin-table-header {
+  text-align: center;
+  margin-left: 10rem;
+}
+.button-add {
+  background-color: #5db7e8;
+}
+// .child-table {
+//   display: flex;
+//   flex-direction: column;
+// }
+// tr,
+// th {
+//   border-collapse: collapse;
+// }
+// .adminpage {
+//   margin-bottom: 10px;
+// }
+// .header {
+//   margin-left: 30rem;
+// }
+// .form-content {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   row-gap: 2rem;
+//   border: 2px solid black;
+// }
+// .first-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+// }
+// .second-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+// }
+// .second-row-first {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+// }
+// .second-row-second {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+// }
+// .third-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+// }

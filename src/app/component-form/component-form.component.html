@@ -1,0 +1,73 @@
+<div class="page-container">
+  <div class="form-content">
+    <div class="parent-content"></div>
+    <h2 class="header">SHOP</h2>
+    <div class="first-row">
+      <div>
+        <label for="pid">Product Id: </label
+        ><input type="text" [(ngModel)]="pid" id="pid" />
+      </div>
+      <div>
+        <label for="pname">Product Name: </label
+        ><input type="text" id="pname" [(ngModel)]="pname" />
+      </div>
+      <div>
+        <label for="pdes">Product Description: </label
+        ><input type="text" id="pdes" [(ngModel)]="pdes" />
+      </div>
+    </div>
+    <div class="second-row">
+      <div class="second-row-first">
+        <label for="qua">Product Quantity: </label
+        ><input type="text" id="quantity" [(ngModel)]="pquandity" />
+      </div>
+      <div class="second-row-second">
+        <label for="ppri">Product Price: </label
+        ><input type="text" id="ppri" [(ngModel)]="productPrice" />
+      </div>
+    </div>
+    <div class="third-row">
+      <div>
+        <label for="pavail">Product Availablity: </label
+        ><input
+          type="checkbox"
+          id="pavail"
+          (click)="changeTheBooleanValue($event)"
+        />
+      </div>
+      <div><button class="button-add" (click)="printList()">Add</button></div>
+    </div>
+  </div>
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="givenName"
+      [appNumberNotAloowDirective]="givenName"
+      (sendTheStatus)="sendTheStatus($event)"
+    /><button style="background-color: #5db7e8" (click)="changeRowColor()">
+      Search
+    </button>
+  </div>
+  <div class="child-table">
+    <div class="admin-table">
+      <adminpage
+        class="admin-table"
+        [inuptDatasForAdmin]="inuptDatasForAdmin"
+        [quandityValueFromTheUser]="quandityValueFromTheUser"
+        (afterDelete)="afterDelete($event)"
+        [rowIdValue]="rowIdValue"
+        [givenName]="buttonClickedName"
+      ></adminpage>
+    </div>
+    <div class="user-table">
+      <userpage
+        class="user-table"
+        *ngIf="inputDatasForUser.length > 0"
+        [inputDatasForUser]="inputDatasForUser"
+        (sendTheIdToParent)="sendTheIdToParent($event)"
+        [rowIdValue]="rowIdValue"
+        [givenName]="buttonClickedName"
+      ></userpage>
+    </div>
+  </div>
+</div>

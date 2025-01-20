@@ -1,0 +1,35 @@
+<div class="table-for-border">
+  <table class="admin-table-child" *ngIf="inuptDatasForAdmin.length > 0">
+    <tr>
+      <td>Product Id</td>
+      <td>Product Name</td>
+      <td>Product Description</td>
+      <td>Product Quantity</td>
+      <td>Product Price</td>
+      <td>Product Availablity</td>
+      <td>Action</td>
+    </tr>
+    <tr
+      *ngFor="let item of inuptDatasForAdmin"
+      [appRowColorDirective]="givenName"
+      [productList]="item"
+      [rowIdValue]="rowIdValue"
+      [color]="'purple'"
+    >
+      <td>{{ item.productid }}</td>
+      <td>{{ item.productname }}</td>
+      <td [appTooltipDirective]="item.productdescription" class="tool">
+        {{ item.productdescription | trim : 5 }}
+        <div class="tutu">{{ item.productdescription }}</div>
+      </td>
+      <td>{{ item.productquandity }}</td>
+      <td>{{ item.productPrice | priceTag : "$" }}</td>
+      <td>{{ item.productavailabity }}</td>
+      <td>
+        <button (click)="deleteProduct(item.productid, item.productavailabity)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
